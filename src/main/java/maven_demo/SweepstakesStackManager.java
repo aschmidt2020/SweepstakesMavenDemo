@@ -11,7 +11,7 @@ public class SweepstakesStackManager implements SweepstakesManager{
 	@Override
 	public void InsertSweepstakes(Sweepstakes sweepstakes) {
 		stack.push(sweepstakes);
-		System.out.println(stack);
+		//System.out.println(stack);
 	}
 
 	@Override
