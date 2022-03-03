@@ -8,7 +8,8 @@ public class Sweepstakes {
 	public String name;
 	public HashMap<Integer, Contestant> contestants;
 	
-	public Sweepstakes() {
+	public Sweepstakes(String name) {
+		this.name = name;
 		contestants = new HashMap<Integer, Contestant>();
 		RegisterContestantsFromCSV();
 	}
@@ -27,7 +28,7 @@ public class Sweepstakes {
 //		System.out.println("TBD");
 		int id = 0;
 		if(contestants != null) {			
-			id = contestants.size() + 1;
+			id = contestants.size() + 2;
 		}
 		else {
 			id = 1;
@@ -54,6 +55,8 @@ public class Sweepstakes {
 //		System.out.println("TBD");
 		Random rand = new Random();
 		int randomNumber = rand.nextInt(contestants.size());
-		return contestants.get(randomNumber);
+		Contestant winnerContestant = contestants.get(randomNumber);
+		winnerContestant.setWinner(true);
+		return winnerContestant;
 	}
 }

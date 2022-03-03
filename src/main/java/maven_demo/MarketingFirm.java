@@ -3,11 +3,18 @@ package maven_demo;
 public class MarketingFirm {
 	public SweepstakesManager manager;
 	
+	public MarketingFirm(SweepstakesManager manager) {
+		this.manager = manager;
+	}
+
 	public void AddSweepstakes(String name) {
-		System.out.println("TBD");
+		Sweepstakes newSweepstakes = new Sweepstakes(name);
+		manager.InsertSweepstakes(newSweepstakes);
 	}
 	
 	public void RunSweepstakes() {
-		System.out.println("TBD");
+		Sweepstakes nextSweepstakes = manager.GetSweepstakes();
+		Contestant winnerContestant = nextSweepstakes.ContestantPickWinner();
+		System.out.println(winnerContestant.firstName + " " + winnerContestant.lastName + " " + winnerContestant.email);
 	}
 }

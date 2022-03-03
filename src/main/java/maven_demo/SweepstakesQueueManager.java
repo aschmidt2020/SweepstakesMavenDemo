@@ -9,10 +9,12 @@ public class SweepstakesQueueManager implements SweepstakesManager{
 		queue = new LinkedList<Sweepstakes>();
 	}
 
+	@Override
 	public void InsertSweepstakes(Sweepstakes sweepstakes) {
 		queue.add(sweepstakes);
 	}
 	
+	@Override
 	public Sweepstakes GetSweepstakes() {
 		//to remove and return front value
 		Sweepstakes next = queue.remove();

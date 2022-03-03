@@ -15,7 +15,7 @@ public class Contestant {
 	public Boolean winner;
 	
 	public Contestant() {
-		
+		//parameterless constructor
 	}
 
 	public Contestant(int id, String firstName, String lastName, String email, Boolean winner) {
