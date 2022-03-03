@@ -12,7 +12,7 @@ public class SweepstakesQueueManager implements SweepstakesManager{
 	@Override
 	public void InsertSweepstakes(Sweepstakes sweepstakes) {
 		queue.add(sweepstakes);
-		System.out.println(queue);
+		//System.out.println(queue);
 	}
 	
 	@Override

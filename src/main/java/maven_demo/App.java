@@ -6,11 +6,12 @@ public class App {
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
-		MarketingFirmFactory firmFactory = new MarketingFirmFactory();
+		SweepstakesManagerFactory managerFactory = new SweepstakesManagerFactory();
 		
 		System.out.println("How would you like to manage your sweepstakes? 'Stack' (last in first out) or 'Queue' (first in first out)?");
 		String responseString = scanner.nextLine();
-		MarketingFirm chosenManagerFirm = firmFactory.createFirm(responseString);
+		SweepstakesManager chosenManager = managerFactory.createManager(responseString);
+		MarketingFirm chosenManagerFirm = new MarketingFirm(chosenManager);
 		
 		boolean exit = false;
 		while(exit == false) {

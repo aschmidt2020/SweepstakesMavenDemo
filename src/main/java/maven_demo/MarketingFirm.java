@@ -1,7 +1,5 @@
 package maven_demo;
 
-import java.io.Console;
-
 public class MarketingFirm {
 	public SweepstakesManager manager;
 	

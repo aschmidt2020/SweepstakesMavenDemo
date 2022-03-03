@@ -1,17 +1,15 @@
 package maven_demo;
 
-public class MarketingFirmFactory {
+public class SweepstakesManagerFactory {
 	
-	public MarketingFirm createFirm(String managerType){
+	public SweepstakesManager createManager(String managerType){
 		if(managerType.equals("Stack")) {
 			SweepstakesStackManager stackManager = new SweepstakesStackManager();
-			MarketingFirm stackFirm = new MarketingFirm(stackManager);
-			return stackFirm;
+			return stackManager;
 		}
 		else if(managerType.equals("Queue")){
 			SweepstakesQueueManager queueManager = new SweepstakesQueueManager();		
-			MarketingFirm queueFirm = new MarketingFirm(queueManager);
-			return queueFirm;
+			return queueManager;
 		}
 		return null;
 	}
