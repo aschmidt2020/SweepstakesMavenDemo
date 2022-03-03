@@ -11,11 +11,13 @@ public class SweepstakesStackManager implements SweepstakesManager{
 	@Override
 	public void InsertSweepstakes(Sweepstakes sweepstakes) {
 		stack.push(sweepstakes);
+		System.out.println(stack);
 	}
 
 	@Override
 	public Sweepstakes GetSweepstakes() {
 		Sweepstakes chosenSweepstakes = stack.pop();
+		System.out.println("Running Sweepstakes: " + chosenSweepstakes.name);
 		return chosenSweepstakes;
 	}
 	

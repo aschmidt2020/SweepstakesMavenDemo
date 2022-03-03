@@ -3,7 +3,6 @@ package maven_demo;
 public class MarketingFirmFactory {
 	
 	public MarketingFirm createFirm(String managerType){
-		System.out.println(managerType);
 		if(managerType.equals("Stack")) {
 			SweepstakesStackManager stackManager = new SweepstakesStackManager();
 			MarketingFirm stackFirm = new MarketingFirm(stackManager);

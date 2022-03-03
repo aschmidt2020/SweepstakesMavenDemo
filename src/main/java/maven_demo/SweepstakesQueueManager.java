@@ -12,12 +12,14 @@ public class SweepstakesQueueManager implements SweepstakesManager{
 	@Override
 	public void InsertSweepstakes(Sweepstakes sweepstakes) {
 		queue.add(sweepstakes);
+		System.out.println(queue);
 	}
 	
 	@Override
 	public Sweepstakes GetSweepstakes() {
 		//to remove and return front value
 		Sweepstakes next = queue.remove();
+		System.out.println("Running Sweepstakes: " + next.name);
 		
 		//to return front value without deleting
 		//Sweepstakes peek = queue.peek();

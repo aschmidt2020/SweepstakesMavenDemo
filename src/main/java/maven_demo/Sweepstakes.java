@@ -34,6 +34,7 @@ public class Sweepstakes {
 			id = 1;
 		}
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Contestant's first name:");
 		String firstName = scanner.nextLine();

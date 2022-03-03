@@ -1,5 +1,7 @@
 package maven_demo;
 
+import java.io.Console;
+
 public class MarketingFirm {
 	public SweepstakesManager manager;
 	
@@ -15,6 +17,6 @@ public class MarketingFirm {
 	public void RunSweepstakes() {
 		Sweepstakes nextSweepstakes = manager.GetSweepstakes();
 		Contestant winnerContestant = nextSweepstakes.ContestantPickWinner();
-		System.out.println(winnerContestant.firstName + " " + winnerContestant.lastName + " " + winnerContestant.email);
+		System.out.println("Winner is: " + winnerContestant.firstName + " " + winnerContestant.lastName + " " + winnerContestant.email);
 	}
 }
