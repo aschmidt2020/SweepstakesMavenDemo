@@ -1,13 +1,22 @@
 package maven_demo;
 //import java.util.Scanner;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class Contestant {
+	@CsvBindByName(column = "id")
 	public int id;
+	@CsvBindByName(column = "first_name")
 	public String firstName;
+	@CsvBindByName(column = "last_name")
 	public String lastName;
+	@CsvBindByName(column = "email")
 	public String email;
 	public Boolean winner;
 	
+	public Contestant() {
+		
+	}
 
 	public Contestant(int id, String firstName, String lastName, String email, Boolean winner) {
 		setId(id);

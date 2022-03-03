@@ -1,5 +1,20 @@
 package maven_demo;
+import java.util.Stack;
 
-public class SweepstakesStackManager {
+public class SweepstakesStackManager implements SweepstakesManager{
+	public Stack<Sweepstakes> stack;
+	
+	public SweepstakesStackManager() {
+		stack = new Stack<Sweepstakes>();
+	}
+	
+	public void InsertSweepstakes(Sweepstakes sweepstakes) {
+		stack.push(sweepstakes);
+	}
 
+	public Sweepstakes GetSweepstakes() {
+		Sweepstakes chosenSweepstakes = stack.pop();
+		return chosenSweepstakes;
+	}
+	
 }

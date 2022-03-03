@@ -3,7 +3,9 @@ package maven_demo;
 public class App {
 
 	public static void main(String[] args) {
-		//TODO
+		Sweepstakes sweepstakes = new Sweepstakes();
+		sweepstakes.RegisterContestants();
+		
 	}
 
 }
